@@ -1,0 +1,134 @@
+{
+  "intents": [
+    {
+      "tag": "quiz",
+      "questions": [
+        {
+          "question": "What is the capital of France?",
+          "options": ["A) Paris", "B) Berlin", "C) Madrid", "D) Rome"],
+          "answer": "A"
+        },
+        {
+          "question": "Which planet is known as the Red Planet?",
+          "options": ["A) Venus", "B) Mars", "C) Saturn", "D) Jupiter"],
+          "answer": "B"
+        },
+        {
+          "question": "Who wrote 'Hamlet'?",
+          "options": ["A) Dickens", "B) Shakespeare", "C) Austen", "D) Poe"],
+          "answer": "B"
+        },
+        {
+          "question": "What is the largest mammal?",
+          "options": ["A) Elephant", "B) Giraffe", "C) Blue Whale", "D) Hippopotamus"],
+          "answer": "C"
+        },
+        {
+          "question": "Which element has the chemical symbol 'O'?",
+          "options": ["A) Gold", "B) Oxygen", "C) Osmium", "D) Ozone"],
+          "answer": "B"
+        },
+        {
+          "question": "What is the smallest prime number?",
+          "options": ["A) 0", "B) 1", "C) 2", "D) 3"],
+          "answer": "C"
+        },
+        {
+          "question": "Which ocean is the largest?",
+          "options": ["A) Atlantic", "B) Indian", "C) Pacific", "D) Arctic"],
+          "answer": "C"
+        },
+        {
+          "question": "In which country is the Great Pyramid of Giza?",
+          "options": ["A) Iraq", "B) Egypt", "C) Mexico", "D) India"],
+          "answer": "B"
+        },
+        {
+          "question": "Who painted the Mona Lisa?",
+          "options": ["A) Michelangelo", "B) Picasso", "C) Van Gogh", "D) Leonardo da Vinci"],
+          "answer": "D"
+        },
+        {
+          "question": "Which gas do plants absorb from the atmosphere?",
+          "options": ["A) Oxygen", "B) Nitrogen", "C) Carbon Dioxide", "D) Hydrogen"],
+          "answer": "C"
+        },
+        {
+          "question": "Which is the longest river in the world?",
+          "options": ["A) Amazon", "B) Nile", "C) Yangtze", "D) Mississippi"],
+          "answer": "B"
+        },
+        {
+          "question": "How many continents are there?",
+          "options": ["A) 5", "B) 6", "C) 7", "D) 8"],
+          "answer": "C"
+        },
+        {
+          "question": "Which planet has the most moons?",
+          "options": ["A) Mars", "B) Saturn", "C) Jupiter", "D) Uranus"],
+          "answer": "B"
+        },
+        {
+          "question": "What is the freezing point of water in Celsius?",
+          "options": ["A) 0", "B) 32", "C) -10", "D) 100"],
+          "answer": "A"
+        },
+        {
+          "question": "Who developed the theory of relativity?",
+          "options": ["A) Isaac Newton", "B) Nikola Tesla", "C) Albert Einstein", "D) Galileo Galilei"],
+          "answer": "C"
+        },
+        {
+          "question": "What is the currency of Japan?",
+          "options": ["A) Dollar", "B) Won", "C) Yen", "D) Yuan"],
+          "answer": "C"
+        },
+        {
+          "question": "Which language has the most native speakers?",
+          "options": ["A) English", "B) Spanish", "C) Mandarin", "D) Hindi"],
+          "answer": "C"
+        },
+        {
+          "question": "What is the hardest natural substance?",
+          "options": ["A) Gold", "B) Iron", "C) Diamond", "D) Quartz"],
+          "answer": "C"
+        },
+        {
+          "question": "How many sides does a hexagon have?",
+          "options": ["A) 5", "B) 6", "C) 7", "D) 8"],
+          "answer": "B"
+        },
+        {
+          "question": "Who discovered penicillin?",
+          "options": ["A) Marie Curie", "B) Alexander Fleming", "C) Louis Pasteur", "D) Isaac Newton"],
+          "answer": "B"
+        },
+        {
+          "question": "Which is the tallest mountain in the world?",
+          "options": ["A) K2", "B) Everest", "C) Kilimanjaro", "D) Denali"],
+          "answer": "B"
+        },
+        {
+          "question": "What is the main language spoken in Brazil?",
+          "options": ["A) Spanish", "B) Portuguese", "C) French", "D) English"],
+          "answer": "B"
+        },
+        {
+          "question": "Which organ is responsible for pumping blood?",
+          "options": ["A) Brain", "B) Kidney", "C) Liver", "D) Heart"],
+          "answer": "D"
+        },
+        {
+          "question": "What is the boiling point of water in Celsius?",
+          "options": ["A) 90", "B) 95", "C) 100", "D) 110"],
+          "answer": "C"
+        },
+        {
+          "question": "What is the largest planet in the solar system?",
+          "options": ["A) Earth", "B) Mars", "C) Jupiter", "D) Saturn"],
+          "answer": "C"
+        }
+      ]
+    }
+  ]
+}
