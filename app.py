@@ -10,7 +10,8 @@ app.secret_key = 'your_super_secret_key_here'
 # Path to your quiz questions JSON file
 # Make sure 'Quiz.json' is in the same directory as this 'app.py' file,
 # or provide the full path if it's elsewhere.
-QUIZ_FILE = 'Quizques.json'
+import os
+QUIZ_FILE = os.path.join(os.path.dirname(__file__), 'Quizques.json')
 
 def load_quiz_questions():
     """Loads quiz questions from the JSON file."""
