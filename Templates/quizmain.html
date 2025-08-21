@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <!-- Tailwind CDN only for reset (optional) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #7e22ce, #3b82f6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        /* Header styles */
+        .site-header {
+            width: 100%;
+            max-width: 64rem; /* matches max-w-4xl */
+            background: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* shadow-md */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem; /* px-6 py-4 */
+        }
+        .site-title {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 700; /* font-bold */
+            color: #7e22ce; /* text-purple-700 */
+        }
+        .header-nav a {
+            margin-left: 1.5rem; /* space-x-6 */
+            color: #4b5563; /* text-gray-600 */
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        .header-nav a:hover {
+            color: #7e22ce; /* hover:text-purple-700 */
+        }
+
+        /* Quiz card styles */
+        .quiz-card {
+            background: white;
+            border-radius: 1rem; /* rounded-2xl */
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1); /* shadow-xl */
+            padding: 2rem; /* p-8 */
+            width: 100%;
+            max-width: 28rem; /* max-w-md */
+            transition: transform 0.3s ease-in-out;
+        }
+        .quiz-card:hover {
+            transform: scale(1.05);
+        }
+        .quiz-progress {
+            font-size: 0.875rem; /* text-sm */
+            color: #6b7280; /* text-gray-500 */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+        .quiz-question {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            color: #1f2937; /* text-gray-800 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+
+        /* Options */
+        .quiz-option input {
+            display: none; /* hidden */
+        }
+        .option-box {
+            width: 100%;
+            text-align: left;
+            padding: 0.75rem 1.25rem; /* py-3 px-5 */
+            border-radius: 0.75rem; /* rounded-xl */
+            border: 2px solid #e5e7eb; /* border-gray-200 */
+            background: #f9fafb; /* bg-gray-50 */
+            color: #374151; /* text-gray-700 */
+            font-weight: 500; /* font-medium */
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            margin-bottom: 0.5rem;
+        }
+        .option-box:hover {
+            background: #f3f4f6; /* hover:bg-gray-100 */
+        }
+        .quiz-option input:checked + .option-box {
+            background: #dbeafe; /* peer-checked:bg-blue-100 */
+            border-color: #3b82f6; /* peer-checked:border-blue-500 */
+            color: #1e40af; /* peer-checked:text-blue-800 */
+        }
+
+        /* Submit button */
+        .submit-btn {
+            background: #7e22ce; /* bg-purple-600 */
+            color: white;
+            font-weight: 700;
+            padding: 0.75rem 2rem; /* py-3 px-8 */
+            border-radius: 9999px; /* rounded-full */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+            border: none;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background: #6d28d9; /* hover:bg-purple-700 */
+            transform: scale(1.05);
+        }
+        .submit-btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px #c084fc; /* focus:ring-purple-300 */
+        }
+        .submit-container {
+            margin-top: 1.5rem; /* mt-6 */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="site-title">Quiz Game</h1>
+            <nav class="header-nav">
+                <a href="/help">Help</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Quiz Card -->
+    <div class="quiz-card">
+        <div class="quiz-progress">
+            Question {{ current_q_num }} / {{ total_q_num }}
+        </div>
+        <h2 class="quiz-question">
+            {{ question }}
+        </h2>
+        <form action="/quiz" method="post" class="quiz-form">
+            {% for option in options %}
+            <label class="quiz-option">
+                <input type="radio" name="answer" value="{{ option.split(')')[0].strip() }}" required>
+                <div class="option-box">
+                    {{ option }}
+                </div>
+            </label>
+            {% endfor %}
+            <div class="submit-container">
+                <button type="submit" class="submit-btn">
+                    Submit Answer
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
+
