@@ -20,7 +20,7 @@ def load_quiz_questions():
 @app.route('/')
 def index():
     """Welcome page."""
-    return render_template('QuizIndex.html')
+    return render_template('index.html')
 
 @app.route('/start-quiz')
 def start_quiz():
